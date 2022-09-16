@@ -13,11 +13,11 @@
   </sub>
 </div>
 
-[<< Day 2](../02_Day_Data_types/02_day_data_types.md) | [Day 4 >>](../04_Day_Conditionals/04_day_conditionals.md)
+[<< יום 2](../02_Day_Data_types/02_day_data_types.md) | [Day 4 >>](../04_Day_Conditionals/04_day_conditionals.md)
 
 ![Thirty Days Of JavaScript](../images/banners/day_1_3.png)
 
-- [📔 Day 3](#-day-3)
+- [📔 יום 3](#-day-3)
 	- [Booleans](#booleans)
 		- [Truthy values](#truthy-values)
 		- [Falsy values](#falsy-values)
@@ -55,7 +55,7 @@
 
 ## בוליאנים
 
-סוג נתונים בוליאני מייצג אחד משני הערכים:_true_ או _false_. ערך בוליאני הוא נכון או שקר. השימוש בסוגי נתונים אלה יהיה ברור כאשר אתה מפעיל את אופרטור ההשוואה. כל השוואות מחזירות ערך בוליאני שהוא נכון או שקר.
+סוג נתונים בוליאני מייצג אחד משני הערכים:_true_ או _false_. ערך בוליאני הוא אמת או שקר. השימוש בסוגי נתונים אלה יהיה ברור כאשר אתה מפעיל את אופרטור ההשוואה. כל השוואות מחזירות ערך בוליאני שהוא אמת או שקר.
 
 **דוגמה: ערכים בוליאניים**
 
@@ -70,13 +70,13 @@ let falseValue = 4 < 3  // false
 
 הסכמנו שערכים בוליאניים הם נכונים או שקריים.
 
-### ערכי אמת
+### ערכי  true
 
 - כל המספרים (חיוביים ושליליים) נכונים מלבד אפס
 - כל המחרוזות נכונות מלבד מחרוזת ריקה ('')
 - הערך הבולאיני true 
 
-### ערכים כוזבים
+### ערכי false 
 
 - 0
 - 0n
@@ -86,7 +86,7 @@ let falseValue = 4 < 3  // false
 - הערך הבוליאני false 
 - '', "", ``, מחרוזת ריקה
 
-טוב לזכור את אותם ערכי אמת וערכים כוזבים. בסעיף מאוחר יותר, נשתמש בהם עם תנאים לקבלת החלטות.
+טוב לזכור את אותם ערכי אמת וערכים שקר. בסעיף מאוחר יותר, נשתמש בהם עבור תנאים לקבלת החלטות.
 
 ## Undefined
 
@@ -94,7 +94,7 @@ let falseValue = 4 < 3  // false
 
 ```js
 let firstName
-console.log(firstName) //not defined, because it is not assigned to a value yet
+console.log(firstName) //לא מוגדר, מכיוון שהוא עדיין לא מוקצה לערך
 ```
 
 ## Null
@@ -108,7 +108,7 @@ console.log(empty) // -> פירושו אין ערך ,null
 
 ### אופרטור הקצאה
 
-סימן שוויון ב-JavaScript הוא אופרטור הקצאה. הוא משתמש כדי להקצות משתנה.
+סימן שוויון (=) ב-JavaScript הוא אופרטור הקצאה. הוא משמש כדי להקצות משתנה.
 
 ```js
 let firstName = 'Asabeneh'
@@ -119,16 +119,16 @@ let country = 'Finland'
 
 ![Assignment operators](../images/assignment_operators.png)
 
-### Arithmetic Operators
+### אופרטורים חשבוניים
 
-Arithmetic operators are mathematical operators.
+אופרטורים חשבוניים הם אופרטורים מתמטיים.
 
-- Addition(+): a + b
-- Subtraction(-): a - b
-- Multiplication(*): a * b
-- Division(/): a / b
-- Modulus(%): a % b
-- Exponential(**): a ** b
+- חיבור(+): a + b
+- חיסור(-): a - b
+- כפל(*): a * b
+- חילוק(/): a / b
+- מודולס(%): a % b
+- אקספוננציאלי (**): a ** b
 
 ```js
 let numOne = 4
@@ -146,17 +146,17 @@ console.log(sum, diff, mult, div, remainder, powerOf) // 7,1,12,1.33,1, 64
 
 ```js
 const PI = 3.14
-let radius = 100          // length in meter
+let radius = 100          // אורך במטר
 
-//Let us calculate area of a circle
+//הבה נחשב שטח של עיגול
 const areaOfCircle = PI * radius * radius
 console.log(areaOfCircle)  //  314 m
 
 
-const gravity = 9.81      // in m/s2
-let mass = 72             // in Kilogram
+const gravity = 9.81      // ב-m/s2
+let mass = 72             // בקילוגרם
 
-// Let us calculate weight of an object
+// הבה נחשב משקל של חפץ
 const weight = mass * gravity
 console.log(weight)        // 706.32 N(Newton)
 
@@ -164,7 +164,7 @@ const boilingPoint = 100  // temperature in oC, boiling point of water
 const bodyTemp = 37       // body temperature in oC
 
 
-// Concatenating string with numbers using string interpolation
+// שרשור מחרוזת עם מספרים באמצעות שרבוב מחרוזת
 /*
  The boiling point of water is 100 oC.
  Human body temperature is 37 oC.
@@ -186,9 +186,9 @@ console.log(
 console.log(3 > 2)              // נכון, כי 3 גדול מ-2
 console.log(3 >= 2)             // נכון, כי 3 גדול מ-2
 console.log(3 < 2)              // שקר, כי 3 גדול מ-2
-console.log(2 < 3)              // true, because 2 is less than 3
-console.log(2 <= 3)             // true, because 2 is less than 3
-console.log(3 == 2)             // false, because 3 is not equal to 2
+console.log(2 < 3)              // נכון, כי 2 זה פחות מ-3
+console.log(2 <= 3)             // נכון, כי 2 זה פחות מ-3
+console.log(3 == 2)             // שקר, כי 3 אינו שווה ל-2
 console.log(3 != 2)             // true, because 3 is not equal to 2
 console.log(3 == '3')           // true, compare only value
 console.log(3 === '3')          // false, compare both value and data type
@@ -217,21 +217,21 @@ console.log('tomato'.length == 'potato'.length)  // true
 console.log('python'.length > 'dragon'.length)   // false
 ```
 
-Try to understand the above comparisons with some logic. Remembering without any logic might be difficult.
-JavaScript is somehow a wired kind of programming language. JavaScript code run and give you a result but unless you are good at it may not be the desired result.
+נסה להבין את ההשוואות לעיל עם קצת היגיון. לזכור ללא שום היגיון עשוי להיות קשה.
+JavaScript היא איכשהו סוג  של שפת תכנות. קוד JavaScript רץ ונותן לך תוצאה, אבל אלא אם כן אתה לא מבין, ייתכן שזו לא התוצאה הרצויה.
 
-As rule of thumb, if a value is not true with == it will not be equal with ===. Using === is safer than using ==. The following [link](https://dorey.github.io/JavaScript-Equality-Table/) has an exhaustive list of comparison of data types.
+ככלל אצבע, אם ערך אינו נכון עם == הוא לא יהיה שווה ל-===. שימוש ב=== בטוח יותר משימוש ב==. ב-[קישור](https://dorey.github.io/JavaScript-Equality-Table/) יש רשימה ממצה של השוואה בין סוגי נתונים.
 
-### Logical Operators
+### אופרוטרים לוגיים
 
-The following symbols are the common logical operators:
-&&(ampersand) , ||(pipe) and !(negation).
-The && operator gets true only if the two operands are true.
-The || operator gets true either of the operand is true.
-The ! operator negates true to false and false to true.
+הסמלים הבאים הם האופרטורים הלוגיים הנפוצים:
+&&(גם) , ||(או) ו-!(שלילה).
+האופרטור && מקבל אמת רק אם שני האופרנדים נכונים.
+ה || האופרטור מקבל אמת כל אחד מהאופרנד הוא אמת.
+ה ! האופרטור שולל אמת ל-false ו-false ל-true.
 
 ```js
-// && ampersand operator example
+// && דוגמה לאופרטור (and)גם 
 
 const check = 4 > 3 && 10 > 5         // true && true -> true
 const check = 4 > 3 && 10 < 5         // true && false -> false
@@ -252,11 +252,11 @@ let isLightOff = !isLightOn           // false
 let isMarried = !false                // true
 ```
 
-### Increment Operator
+### אופורטור +
 
-In JavaScript we use the increment operator to increase a value stored in a variable. The increment could be pre or post increment. Let us see each of them:
+ב-JavaScript אנו משתמשים באופרטור + כדי להגדיל ערך המאוחסן במשתנה. התוספת יכולה להיות תוספת לפני או אחרי. הבה נראה כל אחד מהם:
 
-1. Pre-increment
+1. תוספת מראש
 
 ```js
 let count = 0
@@ -264,7 +264,7 @@ console.log(++count)        // 1
 console.log(count)          // 1
 ```
 
-1. Post-increment
+1. לאחר ההגדלה
 
 ```js
 let count = 0
@@ -272,13 +272,14 @@ console.log(count++)        // 0
 console.log(count)          // 1
 ```
 
-We use most of the time post-increment. At least you should remember how to use post-increment operator.
+אנחנו משתמשים ברוב הזמן לאחר ההגדלה. לפחות אתה צריך לזכור כיצד להשתמש באופרטור שלאחר ההגדלה.
 
-### Decrement Operator
+### אופורטור -
 
-In JavaScript we use the decrement operator to decrease a value stored in a variable. The decrement could be pre or post decrement. Let us see each of them:
 
-1. Pre-decrement
+ב-JavaScript אנו משתמשים באופרטור ה- כדי להקטין ערך המאוחסן במשתנה. ההפחתה יכולה להיות לפני או אחרי ההפחתה. הבה נראה כל אחד מהם:
+
+1. הפחתה מראש
 
 ```js
 let count = 0
@@ -286,7 +287,7 @@ console.log(--count) // -1
 console.log(count)  // -1
 ```
 
-2. Post-decrement
+2. לאחר ההפחתה
 
 ```js
 let count = 0
@@ -379,125 +380,125 @@ console.log(agree) // result will be true or false based on what you click on th
 
 These are not all the window methods we will have a separate section to go deep into window methods.
 
-## Date Object
+## אובייקט תאריך
 
-Time is an important thing. We like to know the time a certain activity or event. In JavaScript current time and date is created using JavaScript Date Object. The object we create using Date object provides many methods to work with date and time.The methods we use to get date and time information from a date object values are started with a word _get_ because it provide the information.
+זמן הוא דבר חשוב. אנחנו אוהבים לדעת את השעה שבה פעילות או אירוע מסוים. ב-JavaScript השעה והתאריך הנוכחיים נוצרים באמצעות אוביקט של Date של JavaScript. האובייקט שאנו יוצרים באמצעות אובייקט Date מספק מתודות רבות לעבודה עם תאריך ושעה. המתודות בהן אנו משתמשים כדי לקבל מידע על תאריך ושעה מאובייקט התאריך מתחילים במילה _get_ מכיוון שהיא מספקת את המידע.
 _getFullYear(), getMonth(), getDate(), getDay(), getHours(), getMinutes, getSeconds(), getMilliseconds(), getTime(), getDay()_
 
 ![Date time Object](../images/date_time_object.png)
 
-### Creating a time object
+### יצירת אובייקט זמן
 
-Once we create time object. The time object will provide information about time. Let us create a time object
-
-```js
-const now = new Date()
-console.log(now) // Sat Jan 04 2020 00:56:41 GMT+0200 (Eastern European Standard Time)
-```
-
-We have created a time object and we can access any date time information from the object using the get methods we have mentioned on the table.
-
-### Getting full year
-
-Let's extract or get the full year from a time object.
+ברגע שאנו יוצרים אובייקט זמן. אובייקט הזמן יספק מידע על הזמן. הבה ניצור אובייקט זמן
 
 ```js
 const now = new Date()
-console.log(now.getFullYear()) // 2020
+console.log(now) // Sat Jan 04 2020 00:56:41 GMT+0200 (שעון תקן מזרח אירופי)
 ```
 
-### Getting month
+יצרנו אובייקט זמן ונוכל לגשת לכל מידע על תאריך שעה מהאובייקט באמצעות המתודות get שהזכרנו בטבלה.
 
-Let's extract or get the month from a time object.
+### קבלת שנה 
+
+בואו נחלץ או נקבל את השנה המלאה מאובייקט זמן.
 
 ```js
 const now = new Date()
-console.log(now.getMonth()) // 0, because the month is January,  month(0-11)
+console.log(now.getFullYear()) // 2022
 ```
 
-### Getting date
+### קבלת חדש
 
-Let's extract or get the date of the month from a time object.
+בואו נחלץ או נקבל את החודש מאובייקט זמן.
 
 ```js
 const now = new Date()
-console.log(now.getDate()) // 4, because the day of the month is 4th,  day(1-31)
+console.log(now.getMonth()) // 0, כי החודש הוא ינואר, חודשים (0-11)
 ```
 
-### Getting day
+### קבלת תאריך
 
-Let's extract or get the day of the week from a time object.
+בואו נחלץ או נקבל את תאריך החודש מאובייקט זמן.
 
 ```js
 const now = new Date()
-console.log(now.getDay()) // 6, because the day is Saturday which is the 7th day
-//  Sunday is 0, Monday is 1 and Saturday is 6
-// Getting the weekday as a number (0-6)
+console.log(now.getDate()) //4, כי היום בחודש הוא הרביעי, ימים (1-31)
 ```
 
-### Getting hours
+### קבלת יום
 
-Let's extract or get the hours from a time object.
+בואו נחלץ או נקבל את היום בשבוע מאובייקט זמן.
 
 ```js
 const now = new Date()
-console.log(now.getHours()) // 0, because the time is 00:56:41
+console.log(now.getDay()) // 6, כי היום הוא שבת שהוא היום השביעי
+//  יום ראשון הוא 0, יום שני הוא 1 ושבת הוא 6
+// קבלת יום השבוע כמספר (0-6)
 ```
 
-### Getting minutes
+### קבלת שעה
+
+בואו נחלץ או נקבל את השעות מאובייקט זמן.
+
+```js
+const now = new Date()
+console.log(now.getHours()) // 0, כי השעה היא 00:56:41
+```
+
+### קבלת דקות
 
 Let's extract or get the minutes from a time object.
 
 ```js
 const now = new Date()
-console.log(now.getMinutes()) // 56, because the time is 00:56:41
+console.log(now.getMinutes()) // 56, כי השעה היא 00:56:41
 ```
 
-### Getting seconds
+### קבלת שניות
 
-Let's extract or get the seconds from a time object.
+בואו נחלץ או נקבל את השניות מאובייקט זמן.
 
 ```js
 const now = new Date()
-console.log(now.getSeconds()) // 41, because the time is 00:56:41
+console.log(now.getSeconds()) // 41, כי השעה היא 00:56:41
 ```
 
-### Getting time
+### קבלת זמן
 
-This method give time in milliseconds starting from January 1, 1970. It is also know as Unix time. We can get the unix time in two ways:
+שיטה זו נותנת זמן באלפיות שניות החל מה-1 בינואר 1970. היא ידועה גם כזמן יוניקס. אנו יכולים לקבל את זמן יוניקס בשתי דרכים:
 
-1. Using _getTime()_
+1. שימוש ב _getTime()_
 
 ```js
 const now = new Date() //
-console.log(now.getTime()) // 1578092201341, this is the number of seconds passed from January 1, 1970 to January 4, 2020 00:56:41
+console.log(now.getTime()) // 1578092201341, זה מספר השניות שעברו מ-1 בינואר 1970 עד 4 בינואר 2020 00:56:41
 ```
 
-1. Using _Date.now()_
+1. שימוש ב _Date.now()_
 
 ```js
 const allSeconds = Date.now() //
-console.log(allSeconds) // 1578092201341, this is the number of seconds passed from January 1, 1970 to January 4, 2020 00:56:41
+console.log(allSeconds) // 1578092201341, זה מספר השניות שעברו מ-1 בינואר 1970 עד 4 בינואר 2020 00:56:41
 
 const timeInSeconds = new Date().getTime()
 console.log(allSeconds == timeInSeconds) // true
 ```
 
-Let us format these values to a human readable time format.
-**Example:**
+תן לנו לעצב את הערכים האלה לפורמט זמן קריא אנושי.
+**דוגמה:**
 
 ```js
 const now = new Date()
-const year = now.getFullYear() // return year
-const month = now.getMonth() + 1 // return month(0 - 11)
-const date = now.getDate() // return date (1 - 31)
-const hours = now.getHours() // return number (0 - 23)
-const minutes = now.getMinutes() // return number (0 -59)
+const year = now.getFullYear() // מחזיר שנה
+const month = now.getMonth() + 1 // מחזיר חודש(0 - 11)
+const date = now.getDate() // מחזיר יום החודש (1 - 31)
+const hours = now.getHours() // מחזיר שעה (0 - 23)
+const minutes = now.getMinutes() // מחזיר דקה (0 -59)
 
 console.log(`${date}/${month}/${year} ${hours}:${minutes}`) // 4/1/2020 0:56
 ```
 
-🌕  You have boundless energy. You have just completed day 3 challenges and you are three steps a head in to your way to greatness. Now do some exercises for your brain and for your muscle.
+🌕 יש לך אנרגיה חסרת גבולות. זה עתה סיימת את אתגרי היום השלישי ואת שלושה צעדים ראש בראש בדרכך לגדולה. עכשיו תעשה כמה תרגילים למוח שלכך ולשרירים שלך.
 
 ## 💻 Day 3: Exercises
 
