@@ -1,15 +1,16 @@
-# 30 Days Of JavaScript
+# 30 Days Of JavaScript - Hebrew 
+# זהו נסיון לתרגם את המדריך הזה לעברית - מוזמנים לעזור בתרגום!
 
 | # יום |                                                                       נושאים                                                                        |
 | ----- | :-------------------------------------------------------------------------------------------------------------------------------------------------: |
 | 01    |                                                             [מבוא](./readMe.md)                                                             |
-| 02    |                                               [Data Types](./02_Day_Data_types/02_day_data_types.md)                                                |
+| 02    |                                               [סוגי נתונים](./02_Day_Data_types/02_day_data_types.md)                                                |
 | 03    |                             [Booleans, Operators, Date](./03_Day_Booleans_operators_date/03_booleans_operators_date.md)                             |
 | 04    |                                            [Conditionals](./04_Day_Conditionals/04_day_conditionals.md)                                             |
-| 05    |                                                     [Arrays](./05_Day_Arrays/05_day_arrays.md)                                                      |
-| 06    |                                                       [Loops](./06_Day_Loops/06_day_loops.md)                                                       |
-| 07    |                                                 [Functions](./07_Day_Functions/07_day_functions.md)                                                 |
-| 08    |                                                    [Objects](./08_Day_Objects/08_day_objects.md)                                                    |
+| 05    |                                                     [מערכים](./05_Day_Arrays/05_day_arrays.md)                                                      |
+| 06    |                                                       [לולאות](./06_Day_Loops/06_day_loops.md)                                                       |
+| 07    |                                                 [פונקציות](./07_Day_Functions/07_day_functions.md)                                                 |
+| 08    |                                                    [אוביקטים](./08_Day_Objects/08_day_objects.md)                                                    |
 | 09    |                             [Higher Order Functions](./09_Day_Higher_order_functions/09_day_higher_order_functions.md)                              |
 | 10    |                                           [Sets and Maps](./10_Day_Sets_and_Maps/10_day_Sets_and_Maps.md)                                           |
 | 11    |                      [Destructuring and Spreading](./11_Day_Destructuring_and_spreading/11_day_destructuring_and_spreading.md)                      |
@@ -167,7 +168,7 @@ v12.14.0
 
 #### פתיחת קונסול של Google Chrome 
 
-אתה יכול לפתוח את קונסולת Google Chrome על ידי לחיצה על שלוש נקודות בפינה השמאלית העליונה של הדפדפן, בחירת _כלים נוספים -> כלי מפתחים_ או שימוש בקיצור מקלדת. אני מעדיף להשתמש בקיצורי דרך.
+אתה יכול לפתוח את קונסולת Google Chrome על ידי לחיצה על שלוש נקודות בפינה השמאלית העליונה של הדפדפן, בחירת _כלים נוספים -> כלים עבור מפתחים_ או שימוש בקיצור מקלדת. אני מעדיף להשתמש בקיצורי דרך.
 
 ![Opening chrome](images/opening_developer_tool.png)
 
@@ -481,9 +482,9 @@ _String (מחרוזת), Number (מספר), Boolean (בוליאן), undefined, Nu
 
 ### בוליאן
 
-ערך בוליאני הוא נכון או לא נכון. כל השוואה מחזירה ערך בוליאני, שהוא נכון או שקר.
+ערך בוליאני הוא אמת-true או שקר-false. כל השוואה מחזירה ערך בוליאני, שהוא true או false.
 
-סוג נתונים בוליאני הוא ערך אמיתי או לא נכון.
+סוג נתונים בוליאני הוא ערך האם זה נכון או לא נכון.
 
 **דוגמה:**
 
