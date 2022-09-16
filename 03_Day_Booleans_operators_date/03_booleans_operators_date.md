@@ -51,13 +51,13 @@
 		- [Exercises: Level 2](#exercises-level-2)
 		- [Exercises: Level 3](#exercises-level-3)
 
-# 📔 Day 3
+#  📔 יום 3
 
-## Booleans
+## בוליאנים
 
-A boolean data type represents one of the two values:_true_ or _false_. Boolean value is either true or false. The use of these data types will be clear when you start the comparison operator. Any comparisons return a boolean value which is either true or false.
+סוג נתונים בוליאני מייצג אחד משני הערכים:_true_ או _false_. ערך בוליאני הוא נכון או שקר. השימוש בסוגי נתונים אלה יהיה ברור כאשר אתה מפעיל את אופרטור ההשוואה. כל השוואות מחזירות ערך בוליאני שהוא נכון או שקר.
 
-**Example: Boolean Values**
+**דוגמה: ערכים בוליאניים**
 
 ```js
 let isLightOn = true
@@ -68,29 +68,29 @@ let truValue = 4 > 3    // true
 let falseValue = 4 < 3  // false
 ```
 
-We agreed that boolean values are either true or false.
+הסכמנו שערכים בוליאניים הם נכונים או שקריים.
 
-### Truthy values
+### ערכי אמת
 
-- All numbers(positive and negative) are truthy except zero
-- All strings are truthy except an empty string ('')
-- The boolean true
+- כל המספרים (חיוביים ושליליים) נכונים מלבד אפס
+- כל המחרוזות נכונות מלבד מחרוזת ריקה ('')
+- הערך הבולאיני true 
 
-### Falsy values
+### ערכים כוזבים
 
 - 0
 - 0n
 - null
 - undefined
 - NaN
-- the boolean false
-- '', "", ``, empty string
+- הערך הבוליאני false 
+- '', "", ``, מחרוזת ריקה
 
-It is good to remember those truthy values and falsy values. In later section, we will use them with conditions to make decisions.
+טוב לזכור את אותם ערכי אמת וערכים כוזבים. בסעיף מאוחר יותר, נשתמש בהם עם תנאים לקבלת החלטות.
 
 ## Undefined
 
-If we declare a variable and if we do not assign a value, the value will be undefined. In addition to this, if a function is not returning the value, it will be undefined.
+אם נכריז על משתנה ואם לא נקצה ערך, הערך לא יהיה מוגדר. בנוסף לכך, אם פונקציה לא מחזירה את הערך, היא לא תהיה מוגדרת.
 
 ```js
 let firstName
@@ -101,21 +101,21 @@ console.log(firstName) //not defined, because it is not assigned to a value yet
 
 ```js
 let empty = null
-console.log(empty) // -> null , means no value
+console.log(empty) // -> פירושו אין ערך ,null  
 ```
 
 ## Operators
 
-### Assignment operators
+### אופרטור הקצאה
 
-An equal sign in JavaScript is an assignment operator. It uses to assign a variable.
+סימן שוויון ב-JavaScript הוא אופרטור הקצאה. הוא משתמש כדי להקצות משתנה.
 
 ```js
 let firstName = 'Asabeneh'
 let country = 'Finland'
 ```
 
-Assignment Operators
+אופרטור הקצאה
 
 ![Assignment operators](../images/assignment_operators.png)
 
@@ -175,17 +175,17 @@ console.log(
 )
 ```
 
-### Comparison Operators
+### אופרטור השוואה
 
-In programming we compare values, we use comparison operators to compare two values. We check if a value is greater or less or equal to other value.
+בתכנות אנו משווים ערכים, אנו משתמשים באופרטורים להשוואה כדי להשוות שני ערכים. אנו בודקים אם ערך גדול או קטן או שווה לערך אחר.
 
 ![Comparison Operators](../images/comparison_operators.png)
-**Example: Comparison Operators**
+**דוגמה: אופרטור השוואה**
 
 ```js
-console.log(3 > 2)              // true, because 3 is greater than 2
-console.log(3 >= 2)             // true, because 3 is greater than 2
-console.log(3 < 2)              // false,  because 3 is greater than 2
+console.log(3 > 2)              // נכון, כי 3 גדול מ-2
+console.log(3 >= 2)             // נכון, כי 3 גדול מ-2
+console.log(3 < 2)              // שקר, כי 3 גדול מ-2
 console.log(2 < 3)              // true, because 2 is less than 3
 console.log(2 <= 3)             // true, because 2 is less than 3
 console.log(3 == 2)             // false, because 3 is not equal to 2
