@@ -50,49 +50,49 @@
 
 # 📔 Day 5
 
-## Arrays
+## מערכים
 
-In contrast to variables, an array can store _multiple values_. Each value in an array has an _index_, and each index has _a reference in a memory address_. Each value can be accessed by using their _indexes_. The index of an array starts from _zero_, and the  index of the last element is less by one from the length of the array.
+בניגוד למשתנים, מערך יכול לאחסן _ערכים רבים_. לכל ערך במערך יש _אינדקס_, ולכל אינדקס יש _הפניה בכתובת זיכרון_. ניתן לגשת לכל ערך באמצעות ה-_אינדקס_ שלהם. האינדקס של מערך מתחיל מ-_0_, והאינדקס של האלמנט האחרון קטן באחד מאורך המערך.
 
-An array is a collection of different data types which are ordered and changeable(modifiable). An array allows storing duplicate elements and different data types. An array can be empty, or it may have different data type values.
+מערך הוא אוסף של סוגי נתונים שונים אשר מסודרים וניתנים לשינוי. מערך מאפשר אחסון אלמנטים כפולים וסוגי נתונים שונים. מערך יכול להיות ריק, או שיש לו ערכי סוגי נתונים שונים.
 
-### How to create an empty array
+### כיצד ליצור מערך ריק
 
-In JavaScript, we can create an array in different ways. Let us see different ways to create an array.
-It is very common to use _const_ instead of _let_ to declare an array variable. If you ar using const it means you do not use that variable name again.
+ב-JavaScript, אנו יכולים ליצור מערך בדרכים שונות. הבה נראה דרכים שונות ליצור מערך.
+נפוץ מאוד להשתמש ב-_const_ במקום ב-_let_ כדי להכריז על משתנה מערך. אם אתה משתמש ב-const זה אומר שאתה לא משתמש בשם המשתנה הזה שוב להקצות לו ערך אחר במקום המערך הנוכחי.
 
-- Using Array constructor
+- שימוש בבנאי מערך
 
 ```js
 // syntax
 const arr = Array()
-// or
+// או
 // let arr = new Array()
 console.log(arr) // []
 ```
 
-- Using square brackets([])
+- שימוש בסוגריים מרובעים ([])
 
 ```js
 // syntax
-// This the most recommended way to create an empty list
+// זו הדרך המומלצת ביותר ליצור רשימה ריקה
 const arr = []
 console.log(arr)
 ```
 
-### How to create an array with values
+### כיצד ליצור מערך עם ערכים
 
-Array with initial values. We use _length_ property to find the length of an array.
+מערך עם ערכים ראשוניים. אנו משתמשים במאפיין _length_ כדי למצוא את האורך של מערך.
 
 ```js
-const numbers = [0, 3.14, 9.81, 37, 98.6, 100] // array of numbers
-const fruits = ['banana', 'orange', 'mango', 'lemon'] // array of strings, fruits
-const vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot'] // array of strings, vegetables
-const animalProducts = ['milk', 'meat', 'butter', 'yoghurt'] // array of strings, products
-const webTechs = ['HTML', 'CSS', 'JS', 'React', 'Redux', 'Node', 'MongDB'] // array of web technologies
-const countries = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland'] // array of strings, countries
+const numbers = [0, 3.14, 9.81, 37, 98.6, 100] // מערך מספרים
+const fruits = ['banana', 'orange', 'mango', 'lemon'] // מערך של מחרוזות, פירות
+const vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot'] // מערך של מחרוזות, ירקות
+const animalProducts = ['milk', 'meat', 'butter', 'yoghurt'] // מערך של מחרוזות, מוצרים
+const webTechs = ['HTML', 'CSS', 'JS', 'React', 'Redux', 'Node', 'MongDB'] // מגוון טכנולוגיות אינטרנט
+const countries = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland'] // מערך של מחרוזות, מדינות
 
-// Print the array and its length
+// הדפס את המערך ואורכו
 
 console.log('Numbers:', numbers)
 console.log('Number of numbers:', numbers.length)
@@ -128,7 +128,7 @@ Countries: ['Finland', 'Estonia', 'Denmark', 'Sweden', 'Norway']
 Number of countries: 5
 ```
 
-- Array can have items of different data types
+- למערך יכולים להיות פריטים מסוגי נתונים שונים
 
 ```js
 const arr = [
@@ -141,9 +141,9 @@ const arr = [
 console.log(arr)
 ```
 
-### Creating an array using split
+### יצירת מערך באמצעות פיצול
 
-As we have seen in the earlier section, we can split a string at different positions, and we can change to an array. Let us see the examples below.
+כפי שראינו ביום הקודם, אנו יכולים לפצל מחרוזת במיקומים שונים, ונוכל לשנות למערך. הבה נראה את הדוגמאות שלהלן.
 
 ```js
 let js = 'JavaScript'
@@ -164,15 +164,15 @@ console.log(words)
 // ["I", "love", "teaching", "and", "empowering", "people.", "I", "teach", "HTML,", "CSS,", "JS,", "React,", "Python"]
 ```
 
-### Accessing array items using index
+### גישה לפריטי מערך באמצעות אינדקס
 
-We access each element in an array using their index. An array index starts from 0. The picture below clearly shows the index of each element in the array.
+אנו ניגשים לכל אלמנט במערך באמצעות האינדקס שלו. אינדקס מערך מתחיל מ-0. התמונה למטה מציגה בבירור את האינדקס של כל אלמנט במערך.
 
 ![arr index](../images/array_index.png)
 
 ```js
 const fruits = ['banana', 'orange', 'mango', 'lemon']
-let firstFruit = fruits[0] // we are accessing the first item using its index
+let firstFruit = fruits[0] // אנו ניגשים לפריט הראשון באמצעות האינדקס שלו
 
 console.log(firstFruit) // banana
 
@@ -190,9 +190,9 @@ console.log(lastFruit)  // lemon
 ```
 
 ```js
-const numbers = [0, 3.14, 9.81, 37, 98.6, 100]  // set of numbers
+const numbers = [0, 3.14, 9.81, 37, 98.6, 100]  // קבוצה של מספרים
 
-console.log(numbers.length)  // => to know the size of the array, which is 6
+console.log(numbers.length)  // => לדעת את גודל המערך, שהוא 6
 console.log(numbers)         // -> [0, 3.14, 9.81, 37, 98.6, 100]
 console.log(numbers[0])      //  -> 0
 console.log(numbers[5])      //  -> 100
@@ -210,10 +210,10 @@ const webTechs = [
   'Redux',
   'Node',
   'MongoDB'
-] // List of web technologies
+] // רשימה של טכנולוגיות אינטרנט
 
-console.log(webTechs)        // all the array items
-console.log(webTechs.length) // => to know the size of the array, which is 7
+console.log(webTechs)        // כל פריטי המערך
+console.log(webTechs.length) // => לדעת את גודל המערך, שהוא 7
 console.log(webTechs[0])     //  -> HTML
 console.log(webTechs[6])     //  -> MongoDB
 
@@ -234,9 +234,9 @@ const countries = [
   'Ireland',
   'Japan',
   'Kenya'
-] // List of countries
+] // רשימת מדינות
 
-console.log(countries)      // -> all countries in array
+console.log(countries)      // -> כל המדינות במערך
 console.log(countries[0])   //  -> Albania
 console.log(countries[10])  //  -> Kenya
 
@@ -254,9 +254,9 @@ const shoppingCart = [
   'Meat',
   'Eggs',
   'Sugar'
-] // List of food products
+] // רשימת מוצרי מזון
 
-console.log(shoppingCart) // -> all shoppingCart in array
+console.log(shoppingCart) // -> כל עגלת הקניות במערך
 console.log(shoppingCart[0]) //  -> Milk
 console.log(shoppingCart[7]) //  -> Sugar
 
@@ -266,12 +266,12 @@ console.log(shoppingCart[lastIndex]) //  -> Sugar
 
 ### Modifying array element
 
-An array is mutable(modifiable). Once an array is created, we can modify the contents of the array elements.
+מערך ניתן לשינוי. לאחר יצירת מערך, נוכל לשנות את התוכן של רכיבי המערך.
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
-numbers[0] = 10      // changing 1 at index 0 to 10
-numbers[1] = 20      // changing  2 at index 1 to 20
+numbers[0] = 10      // שינוי 1 (אינדקס 0) ל-10
+numbers[1] = 20      // שינוי 2 (אינדקס 1) ל-20
 
 console.log(numbers) // [10, 20, 3, 4, 5]
 
@@ -289,9 +289,9 @@ const countries = [
   'Kenya'
 ]
 
-countries[0] = 'Afghanistan'  // Replacing Albania by Afghanistan
+countries[0] = 'Afghanistan'  // מחליפה את אלבניה באפגניסטן
 let lastIndex = countries.length - 1
-countries[lastIndex] = 'Korea' // Replacing Kenya by Korea
+countries[lastIndex] = 'Korea' // מחליף את קניה בקוריאה
 
 console.log(countries)
 ```
@@ -300,43 +300,43 @@ console.log(countries)
 ["Afghanistan", "Bolivia", "Canada", "Denmark", "Ethiopia", "Finland", "Germany", "Hungary", "Ireland", "Japan", "Korea"]
 ```
 
-### Methods to manipulate array
+### מתודות שונות למערך
 
-There are different methods to manipulate an array. These are some of the available methods to deal with arrays:_Array, length, concat, indexOf, slice, splice, join, toString, includes, lastIndexOf, isArray, fill, push, pop, shift, unshift_
+ישנן מתודות שונות לתפעל מערך. אלו הן כמה מהמתודות הזמינות להתמודדות עם מערכים:_Array, length, concat, indexOf, slice, splice, join, toString, include, lastIndexOf, isArray, fill, push, pop, shift, unshift_
 
-#### Array Constructor
+#### בנאי מערך
 
-Array:To create an array.
+מערך: כדי ליצור מערך.
 
 ```js
-const arr = Array() // creates an an empty array
+const arr = Array() // יוצר מערך ריק
 console.log(arr)
 
-const eightEmptyValues = Array(8) // it creates eight empty values
+const eightEmptyValues = Array(8) // זה יוצר שמונה ערכים ריקים
 console.log(eightEmptyValues) // [empty x 8]
 ```
 
-#### Creating static values with fill
+#### יצירת ערכים סטטיים עם מילוי
 
-fill: Fill all the array elements with a static value
+fill: מלא את כל רכיבי המערך בערך סטטי
 
 ```js
-const arr = Array() // creates an an empty array
+const arr = Array() // יוצר מערך ריק
 console.log(arr)
 
-const eightXvalues = Array(8).fill('X') // it creates eight element values filled with 'X'
+const eightXvalues = Array(8).fill('X') // 'X'-זה יוצר שמונה ערכי אלמנט מלאים ב 
 console.log(eightXvalues) // ['X', 'X','X','X','X','X','X','X']
 
-const eight0values = Array(8).fill(0) // it creates eight element values filled with '0'
+const eight0values = Array(8).fill(0) // 'זה יוצר שמונה ערכי אלמנט מלאים ב-'0
 console.log(eight0values) // [0, 0, 0, 0, 0, 0, 0, 0]
 
-const four4values = Array(4).fill(4) // it creates 4 element values filled with '4'
+const four4values = Array(4).fill(4) // 'זה יוצר 4 ערכי אלמנט מלאים ב-'4
 console.log(four4values) // [4, 4, 4, 4]
 ```
 
-#### Concatenating array using concat
+#### שרשור מערך באמצעות concat
 
-concat:To concatenate two arrays.
+concat: כדי לשרשר שני מערכים.
 
 ```js
 const firstList = [1, 2, 3]
@@ -347,9 +347,9 @@ console.log(thirdList) // [1, 2, 3, 4, 5, 6]
 ```
 
 ```js
-const fruits = ['banana', 'orange', 'mango', 'lemon']                 // array of fruits
-const vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot'] // array of vegetables
-const fruitsAndVegetables = fruits.concat(vegetables)                 // concatenate the two arrays
+const fruits = ['banana', 'orange', 'mango', 'lemon']                 // מערך פירות
+const vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot'] // מערך ירקות
+const fruitsAndVegetables = fruits.concat(vegetables)                 // לשרשר את שני המערכים
 
 console.log(fruitsAndVegetables)
 ```
@@ -358,18 +358,18 @@ console.log(fruitsAndVegetables)
 ["banana", "orange", "mango", "lemon", "Tomato", "Potato", "Cabbage", "Onion", "Carrot"]
 ```
 
-#### Getting array length
+#### קבלת אורך מערך
 
-Length:To know the size of the array
+length: לדעת את גודל המערך
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
-console.log(numbers.length) // -> 5 is the size of the array
+console.log(numbers.length) // -> 5 הוא גודל המערך
 ```
 
-#### Getting index an element in arr array
+#### קבלת אינדקס אלמנט במערך arr
 
-indexOf:To check if an item exist in an array. If it exists it returns the index else it returns -1.
+indexOf: כדי לבדוק אם פריט קיים במערך. אם הוא קיים הוא מחזיר את האינדקס אחרת הוא מחזיר -1.
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -380,9 +380,8 @@ console.log(numbers.indexOf(1)) // -> 0
 console.log(numbers.indexOf(6)) // -> -1
 ```
 
-Check an element if it exist in an array.
-
-- Check items in a list
+בדוק אלמנט אם הוא קיים במערך.
+- בדוק פריטים ברשימה
   
 ```js
 // let us check if a banana exist in the array
@@ -410,9 +409,9 @@ if(indexOfAvocado === -1){
 // This fruit does not exist in the array
 ```
 
-#### Getting last index of an element in array
+#### קבלת אינדקס אחרון של אלמנט במערך
 
-lastIndexOf: It gives the position of the last item in the array. If it exist, it returns the index else it returns -1.
+lastIndexOf: הוא נותן את המיקום של הפריט האחרון במערך. אם הוא קיים, הוא מחזיר את המדד אחרת הוא מחזיר -1.
 
 ```js
 const numbers = [1, 2, 3, 4, 5, 3, 1, 2]
@@ -424,7 +423,7 @@ console.log(numbers.lastIndexOf(4)) //  3
 console.log(numbers.lastIndexOf(6)) // -1
 ```
 
-includes:To check if an item exist in an array. If it exist it returns the true else it returns false.
+includes: כדי לבדוק אם קיים פריט במערך. אם הוא קיים הוא מחזיר את ה-true else הוא מחזיר false.
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -442,15 +441,15 @@ const webTechs = [
   'Redux',
   'Node',
   'MongoDB'
-] // List of web technologies
+] // רשימה של טכנולוגיות אינטרנט
 
 console.log(webTechs.includes('Node'))  // true
 console.log(webTechs.includes('C'))     // false
 ```
 
-#### Checking array
+#### בדיקה אם זה מערך
 
-Array.isArray:To check if the data type is an array
+Array.isArray: כדי לבדוק אם סוג הנתונים הוא מערך
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -460,9 +459,9 @@ const number = 100
 console.log(Array.isArray(number)) // false
 ```
 
-#### Converting array to string
+#### המרת מערך למחרוזת
 
-toString:Converts array to string
+toString:ממיר מערך למחרוזת
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
@@ -472,7 +471,7 @@ const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
 console.log(names.toString()) // Asabeneh,Mathias,Elias,Brook
 ```
 
-#### Joining array elements
+#### חיבור אלמנטים של מערך
 
 join: It is used to join the elements of the array, the argument we passed in the join method will be joined in the array and return as a string. By default, it joins with a comma, but we can pass different string parameter which can be joined between the items.
 
